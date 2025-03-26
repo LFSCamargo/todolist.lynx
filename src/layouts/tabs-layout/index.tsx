@@ -1,12 +1,6 @@
-import {
-  useNavigate,
-  useParams,
-  useResolvedPath,
-  useInRouterContext,
-  useLocation,
-} from 'react-router';
+import { useNavigate, useResolvedPath, useLocation } from 'react-router';
 import { assets } from '../../assets/index.js';
-import './styles.css';
+import './styles.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -43,11 +37,11 @@ const tabs = [
   {
     label: 'Todos',
     path: '/',
-    icon: assets.todosIcon
+    icon: assets.todosIcon,
   },
   {
     label: 'Settings',
     path: '/settings',
-    icon: assets.cogIcon
+    icon: assets.cogIcon,
   },
 ];

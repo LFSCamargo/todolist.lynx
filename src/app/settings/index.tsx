@@ -1,5 +1,5 @@
-import { SettingsTemplate } from "./template.jsx";
+import { SettingsTemplate } from './template.jsx';
 
 export function SettingsScreen() {
-  return <SettingsTemplate />
+  return <SettingsTemplate />;
 }
