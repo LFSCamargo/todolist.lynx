@@ -64,7 +64,7 @@ export function TodosTemplate() {
         <text className="header__title">Todos</text>
       </view>
       <scroll-view className="list" scroll-orientation="vertical">
-        {todos.map((todo, index) => {
+        {todos.map((todo) => {
           return (
             <TodoItem
               key={todo.id}
@@ -97,6 +97,7 @@ export function TodosTemplate() {
             bottom-inset={'28px'}
             placeholder={'Add a todo here'}
             className="item__content addTodo__input"
+            // @ts-ignore
             bindinput={handleInput}
           />
         </view>
