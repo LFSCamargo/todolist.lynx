@@ -1,0 +1,147 @@
+.container {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --space-s: 12rpx;
+  --space-m: 18rpx;
+  --space-l: 28rpx;
+  --space-xl: 36rpx;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 36rpx;
+  font-size: 28rpx;
+  --text-color: black;
+  --bg-color: white;
+  --secondary-color: #00000008;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+text,
+input {
+  font-size: 16px;
+  color: var(--text-color);
+  ::placeholder {
+    color: var(--text-color); 
+  }
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  padding: 0px 10px;
+  color: white;
+  height: 60rpx;
+  line-height: 60rpx;
+  align-items: center;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: rgba(255,255,255,0.2);
+  margin: 0 var(--space-s);
+}
+
+.button-light {
+  display: flex;
+  
+  color: white;
+  height: 60rpx;
+  line-height: 60rpx;
+  align-items: center;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 var(--space-s);
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.header {
+  @include row;
+  padding: 0 var(--space-s);
+  margin-bottom: var(--space-l);
+
+  &__title {
+    font-size: 55rpx;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-right: var(--space-s);
+    color: black
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  padding-top: 14px;
+  text {
+    position: absolute;
+    top: -10;
+    left: 10;
+    
+    font-size: 12px;
+    color: white;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item {
+  @include row;
+  border-radius: 24px;
+  font-size: 17px;
+  background-color: var(--secondary-color);
+  padding: var(--space-xl) var(--space-m);
+  margin-bottom: var(--space-l);
+
+  text,
+  input {
+    height: 60rpx;
+    line-height: 60rpx;
+  }
+
+  &__content {
+    font-weight: 500;
+    flex-grow: 1;
+    padding: 0 var(--space-s);
+  }
+}
+
+.image {
+  width: 24px;
+  height: 24px;
+}
+
+.addTodo {
+  margin-top: var(--space-l);
+  background: rgba(0,0,0,0.9);
+
+  & input {
+    margin: 0 var(--space-s);
+  }
+}
+
